@@ -26,3 +26,37 @@ body {
     color: var(--white-50);
     font-family: 'Rubik', sans-serif;
 }
+
+
+.card {
+    background-color: var(--orange-300);
+    border-radius: 1rem;
+    overflow: hidden; /* Shows the orange part behind card*/
+    position: relative;
+    max-width: 300px;
+}
+
+.card-body {
+    background-color: var(--navy-900);
+    border-radius: 1rem;
+    margin-top: 2rem; 
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hours-current {
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+
+.hours-past {
+    color: var(--purple-500);
+}

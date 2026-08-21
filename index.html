@@ -19,30 +19,29 @@
 <body>
   <main class="dashboard">
 
-    <section class="user-card">
-      <img class="user-card__avatar" src="./assets/images/image-jeremy.png" alt="" width="50" height="50">
-      <div class="user-card__meta">
-        <p class="user-card__subtitle">Report for</p>
-        <h1 class="user-card__name">Jeremy Robson</h1>
-      </div>
-      
-      <nav class="user-card__nav">
-        <button class="user-card__nav-link">Daily</button>
-        <button class="user-card__nav-link user-card__nav-link--active">Weekly</button>
-        <button class="user-card__nav-link">Monthly</button>
-      </nav>
+    <section class="user">
+        <img src="./assets/images/image-jeremy.png" alt="" width="50" height="50">
+        <div>
+          <p class="subtitle">Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+
+        <nav class="period-nav">
+          <button>Daily</button>
+          <button class="is-active">Weekly</button>
+          <button>Monthly</button>
+        </nav>
     </section>
 
-    <article class="tracking-card tracking-card--work">
-      <div class="tracking-card__body">
-        <div class="tracking-card__header">
-          <h2 class="tracking-card__title">Work</h2>
-          <button class="tracking-card__options-btn"></button>
+      <!-- 1 hardcoded card, to duplicate/generate per category once data.json is++ -->
+    <article class="card" data-category="work">
+      <div class="card-body">
+        <div class="card-header">
+          <h2>Work</h2>
+          <button class="options-btn" aria-label="Show options for Work">...</button>
         </div>
-        <div class="tracking-card__stats">
-          <p class="tracking-card__hours">32hrs</p>
-          <p class="tracking-card__previous">Last Week - 36hrs</p>
-        </div>
+        <p class="hours-current">32hrs</p>
+        <p class="hours-past">Last Week - 36hrs</p>
       </div>
     </article>
 
@@ -94,6 +93,6 @@
   2hrs <!-- weekly -->
   Previous - 2hrs <!-- weekly -->
   7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
+  Previous - 11hrs monthly 
 </body>
 </html>
