@@ -14,7 +14,7 @@
     --purple-500: hsl(235, 45%, 61%);
     --navy-200: hsl(236, 100%, 87%);
 
-    
+
     --fs-400: 0.875rem;
     --fs-500: 1.125rem;
     --fs-700: 2rem;
@@ -30,7 +30,7 @@
     --space-400: 2rem;
     --space-600: 3rem;
 
-    /* --radius-md: 1rem; */
+    --radius-md: 1rem;
 
 }
 
@@ -44,25 +44,37 @@ body {
     background-color: var(--navy-950);
     color: var(--white-50);
     font-family: 'Rubik', sans-serif;
+
+    /* display: grid;
+    place-items: center; */
+    min-height: 100dvh;
 }
 
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: clamp(1rem, 3vw, 2rem); /* Dynamically change the gap */
+    max-width: 375px;
+    margin-inline: auto;
+    padding: var(--space-300);
+}
 
 .card {
     background-color: var(--orange-300);
-    border-radius: 1rem;
+    border-radius: var(--radius-md);
     overflow: hidden; /* Shows the orange part behind card*/
     position: relative;
-    max-width: 300px;
 }
 
 .card-body {
     background-color: var(--navy-900);
-    border-radius: 1rem;
+    border-radius: var(--radius-md);
     margin-top: 2rem; 
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: var(--space-100);
 }
 
 .card-header {
@@ -72,10 +84,73 @@ body {
 }
 
 .hours-current {
-    font-size: 3.5rem;
+    font-size: var(--fs-800);
     font-weight: 300;
 }
 
 .hours-past {
     color: var(--purple-500);
+}
+
+.user {
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Rounds corners up */
+    background-color: var(--navy-900);
+}
+
+.user-info {
+    background-color: var(--purple-600);
+    border-radius: var(--radius-md);
+    padding: var(--space-300);
+    display: flex;
+    align-items: center;
+    gap: var(--space-200);
+}
+
+.user img {
+    border-radius: 50%;
+    border: 0.2rcap solid var(--white-50);
+}
+
+.subtitle {
+    color: var(--navy-200);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+}
+
+.user h1 {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-light);
+}
+
+.period-nav {
+    background-color: var(--navy-900);
+    padding: var(--space-300);
+    display: flex;
+    flex-direction: row; /* For mobile */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.period-nav button {
+    background: none;
+    border: none;
+    font-family: inherit;
+    color: var(--purple-500);
+    font-size: var(--fs-500);
+    cursor: pointer;
+}
+
+.period-nav button.is-active {
+    color: var(--white-50);
+}
+
+.options-btn {
+    background: none;
+    border: none;
+    color: var(--purple-500);
+    cursor: pointer;
+    font-size: var(--fs-500);
 }
