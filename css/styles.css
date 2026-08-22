@@ -13,6 +13,25 @@
     --navy-900: hsl(235, 46%, 20%);
     --purple-500: hsl(235, 45%, 61%);
     --navy-200: hsl(236, 100%, 87%);
+
+    
+    --fs-400: 0.875rem;
+    --fs-500: 1.125rem;
+    --fs-700: 2rem;
+    --fs-800: 2.5rem;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+
+    --space-100: 0.5rem; 
+    --space-200: 1rem;
+    --space-300: 1.5rem;
+    --space-400: 2rem;
+    --space-600: 3rem;
+
+    /* --radius-md: 1rem; */
+
 }
 
 * {
