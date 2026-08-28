@@ -55,7 +55,6 @@ body {
 
 .dashboard {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     gap: clamp(1rem, 3vw, 2rem); /* Dynamically change the gap */
     max-width: 375px;
@@ -67,14 +66,13 @@ body {
     background-color: var(--orange-300);
     border-radius: var(--radius-md);
     overflow: hidden; /* Shows the orange part behind card*/
-    position: relative;
 }
 
 .card-body {
     background-color: var(--bkgd);
-    border-radius: var(--radius-md);
-    margin-top: 2rem; 
-    padding: 1.5rem;
+    border-radius: var(--radius-md); 
+    margin-top: var(--space-400); 
+    padding: var(--space-300);
     display: flex;
     flex-direction: column;
     gap: var(--space-100);
@@ -88,7 +86,7 @@ body {
 
 .hours-current {
     font-size: var(--fs-800);
-    font-weight: 300;
+    font-weight: far(--fw-light);
 }
 
 .hours-past {
@@ -115,6 +113,8 @@ body {
 .user img {
     border-radius: 50%;
     outline: 3px solid var(--white-50);
+    aspect-ratio: 1 / 1;
+    width: clamp(4rem, 6vw, 7rem);
 }
 
 .user h1 {
@@ -157,9 +157,8 @@ span.subtitle {
     border: none;
     color: var(--purple-500);
     cursor: pointer;
-    font-size: var(--fs-500);
 }
 
 h2 {
-    font-size: var(--fs-400);
+    font-size: var(--fs-500);
 }
