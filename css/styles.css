@@ -68,7 +68,7 @@ body {
     overflow: hidden; /* Shows the orange part behind card*/
 }
 
-.card-body {
+.card-content {
     background-color: var(--bkgd);
     border-radius: var(--radius-md); 
     margin-top: var(--space-400); 
@@ -84,9 +84,33 @@ body {
     align-items: center;
 }
 
+.card[data-category="work"] {
+    background-color: var(--orange-300);
+}
+
+.card[data-category="play"] {
+    background-color: var(--blue-300);
+}
+
+.card[data-category="study"] {
+    background-color: var(--pink-400);
+}
+
+.card[data-category="exercise"] {
+    background-color: var(--green-400);
+}
+
+.card[data-category="social"] {
+    background-color: var(--purple-700);
+}
+
+.card[data-category="self-care"] {
+    background-color: var(--yellow-300);
+}
+
 .hours-current {
     font-size: var(--fs-800);
-    font-weight: far(--fw-light);
+    font-weight: var(--fw-light);
 }
 
 .hours-past {
