@@ -226,7 +226,7 @@ h2 {
 
 @media (min-width: 768px) {
     .dashboard {
-        max-width: 1110px; /* Cap for readability */
+        max-width: 1200px; /* Cap for readability */
         display: grid;
         grid-template-columns: 300px 1fr;
         gap: var(--space-400);
