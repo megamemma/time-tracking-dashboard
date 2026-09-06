@@ -48,8 +48,8 @@ body {
     color: var(--white-50);
     font-family: 'Rubik', sans-serif;
 
-    /* display: grid;
-    place-items: center; */
+    display: grid;
+    place-items: center;
     min-height: 100dvh;
 }
 
@@ -77,7 +77,7 @@ section.cards {
 .card-content {
     background-color: var(--bkgd);
     border-radius: var(--radius-md); 
-    margin-top: var(--space-400); 
+    margin-top: var(--space-600); /* Controlling visibility of svgs, pushing down the content */
     padding: var(--space-300);
     display: flex;
     flex-direction: column;
@@ -94,7 +94,6 @@ section.cards {
     background-color: var(--orange-300);
     background-image: url('../assets/images/icon-work.svg');
     background-repeat: no-repeat;
-    background-position: top right;
     background-size: auto;
     background-position-x: 90%;
     background-position-y: 3%;
@@ -104,7 +103,6 @@ section.cards {
     background-color: var(--blue-300);
     background-image: url('../assets/images/icon-play.svg');
     background-repeat: no-repeat;
-    background-position: top right;
     background-size: auto;
     background-position-x: 90%;        
     background-position-y: 3%;
@@ -114,7 +112,6 @@ section.cards {
     background-color: var(--pink-400);
     background-image: url('../assets/images/icon-study.svg');
     background-repeat: no-repeat;
-    background-position: top right;
     background-size: auto;
     background-position-x: 90%;
     background-position-y: 3%;
@@ -124,7 +121,6 @@ section.cards {
     background-color: var(--green-400);
     background-image: url('../assets/images/icon-exercise.svg');
     background-repeat: no-repeat;
-    background-position: top right;
     background-size: auto;
     background-position-x: 90%;
     background-position-y: 3%;
@@ -134,7 +130,6 @@ section.cards {
     background-color: var(--purple-700);
     background-image: url('../assets/images/icon-social.svg');
     background-repeat: no-repeat;
-    background-position: top right;
     background-size: auto;
     background-position-x: 90%;
     background-position-y: 3%;
@@ -144,7 +139,6 @@ section.cards {
     background-color: var(--yellow-300);
     background-image: url('../assets/images/icon-self-care.svg');
     background-repeat: no-repeat;
-    background-position: top right;
     background-size: auto;
     background-position-x: 90%;
     background-position-y: 3%;
@@ -227,4 +221,38 @@ span.subtitle {
 
 h2 {
     font-size: var(--fs-500);
+}
+
+
+@media (min-width: 768px) {
+    .dashboard {
+        max-width: 1110px; /* Cap for readability */
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: var(--space-400);
+    }
+
+    .user {
+        grid-column: 1;
+        height: 100%;
+    }
+
+    .user-info {
+        flex-direction: column;
+        gap: var(--space-300);
+        align-items: flex-start;
+    }
+
+    .period-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-300);
+    }
+
+    section.cards {
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-400);
+    }
 }
