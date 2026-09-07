@@ -77,7 +77,7 @@ section.cards {
 .card-content {
     background-color: var(--bkgd);
     border-radius: var(--radius-md); 
-    margin-top: var(--space-600); /* Controlling visibility of svgs, pushing down the content */
+    margin-top: var(--space-400); /* Controlling visibility of svgs, pushing down the content */
     padding: var(--space-300);
     display: flex;
     flex-direction: column;
@@ -228,19 +228,23 @@ h2 {
     .dashboard {
         max-width: 1200px; /* Cap for readability */
         display: grid;
-        grid-template-columns: 300px 1fr;
+        grid-template-columns: 250px 1fr;
         gap: var(--space-400);
     }
 
     .user {
         grid-column: 1;
-        height: 100%;
+        justify-content: space-between;
     }
 
     .user-info {
         flex-direction: column;
         gap: var(--space-300);
         align-items: flex-start;
+    }
+
+    .user-info h1 {
+        font-size: var(--fs-800);
     }
 
     .period-nav {
@@ -252,7 +256,8 @@ h2 {
     section.cards {
         grid-column: 2;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: var(--space-400);
+        align-content: space-around; /* Temp. fix, user-info being taller than the cards grid, figure out */
     }
 }
