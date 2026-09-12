@@ -20,9 +20,6 @@
     --purple-500: hsl(235, 45%, 61%);
     --navy-200: hsl(236, 100%, 87%);
 
-        /* Background template: */
-    --bkgd: var(--navy-900);
-
 
     --fs-400: 0.875rem;
     --fs-500: 1.125rem;
@@ -41,8 +38,11 @@
     --space-600: 3rem;
 
     --radius-md: 1rem;
-    --icon-size: 3.625rem;    
 
+    --icon-size: 3.625rem;    
+    --icon-offset: var(--space-300);
+
+    --bkgd: var(--navy-900);
 }
 
 body {
@@ -50,8 +50,8 @@ body {
     color: var(--white-50);
     font-family: 'Rubik', sans-serif;
 
-    display: grid;
-    place-items: center;
+    /* display: grid;
+    place-items: center; */
     min-height: 100dvh;
 }
 
@@ -74,6 +74,9 @@ section.cards {
     background-color: var(--orange-300);
     border-radius: var(--radius-md);
     overflow: hidden; /* Shows the orange part behind card*/
+    background-repeat: no-repeat;
+    background-size: var(--icon-size);
+    background-position: right var(--icon-offset) top var(--icon-offset);
 }
 
 .card-content {
@@ -95,55 +98,31 @@ section.cards {
 .card[data-category="work"] {
     background-color: var(--orange-300);
     background-image: url('../assets/images/icon-work.svg');
-    background-repeat: no-repeat;
-    background-size: var(--icon-size);
-    background-position-x: right var(--space-300);        
-    background-position-y: top -10px;
 }
 
 .card[data-category="play"] {
     background-color: var(--blue-300);
     background-image: url('../assets/images/icon-play.svg');
-    background-repeat: no-repeat;
-    background-size: var(--icon-size);
-    background-position-x: right var(--space-300);        
-    background-position-y: top -10px;
 }
 
 .card[data-category="study"] {
     background-color: var(--pink-400);
     background-image: url('../assets/images/icon-study.svg');
-    background-repeat: no-repeat;
-    background-size: var(--icon-size);
-    background-position-x: right var(--space-300);        
-    background-position-y: top -10px;
 }
 
 .card[data-category="exercise"] {
     background-color: var(--green-400);
     background-image: url('../assets/images/icon-exercise.svg');
-    background-repeat: no-repeat;
-    background-size: var(--icon-size);
-    background-position-x: right var(--space-300);        
-    background-position-y: top -10px;
 }
 
 .card[data-category="social"] {
     background-color: var(--purple-700);
     background-image: url('../assets/images/icon-social.svg');
-    background-repeat: no-repeat;
-    background-size: var(--icon-size);
-    background-position-x: right var(--space-300);        
-    background-position-y: top -10px;
 }
 
 .card[data-category="self-care"] {
     background-color: var(--yellow-300);
     background-image: url('../assets/images/icon-self-care.svg');
-    background-repeat: no-repeat;
-    background-size: var(--icon-size);
-    background-position-x: right var(--space-300);        
-    background-position-y: top -10px;
 }
 
 .hours-current {
