@@ -20,6 +20,9 @@
     --purple-500: hsl(235, 45%, 61%);
     --navy-200: hsl(236, 100%, 87%);
 
+        /* Background template: */
+    --bkgd: var(--navy-900);
+
 
     --fs-400: 0.875rem;
     --fs-500: 1.125rem;
@@ -38,9 +41,8 @@
     --space-600: 3rem;
 
     --radius-md: 1rem;
+    --icon-size: 3.625rem;    
 
-    /* Background template: */
-    --bkgd: var(--navy-900);
 }
 
 body {
@@ -94,54 +96,54 @@ section.cards {
     background-color: var(--orange-300);
     background-image: url('../assets/images/icon-work.svg');
     background-repeat: no-repeat;
-    background-size: auto;
-    background-position-x: 90%;
-    background-position-y: 3%;
+    background-size: var(--icon-size);
+    background-position-x: right var(--space-300);        
+    background-position-y: top -10px;
 }
 
 .card[data-category="play"] {
     background-color: var(--blue-300);
     background-image: url('../assets/images/icon-play.svg');
     background-repeat: no-repeat;
-    background-size: auto;
-    background-position-x: 90%;        
-    background-position-y: 3%;
+    background-size: var(--icon-size);
+    background-position-x: right var(--space-300);        
+    background-position-y: top -10px;
 }
 
 .card[data-category="study"] {
     background-color: var(--pink-400);
     background-image: url('../assets/images/icon-study.svg');
     background-repeat: no-repeat;
-    background-size: auto;
-    background-position-x: 90%;
-    background-position-y: 3%;
+    background-size: var(--icon-size);
+    background-position-x: right var(--space-300);        
+    background-position-y: top -10px;
 }
 
 .card[data-category="exercise"] {
     background-color: var(--green-400);
     background-image: url('../assets/images/icon-exercise.svg');
     background-repeat: no-repeat;
-    background-size: auto;
-    background-position-x: 90%;
-    background-position-y: 3%;
+    background-size: var(--icon-size);
+    background-position-x: right var(--space-300);        
+    background-position-y: top -10px;
 }
 
 .card[data-category="social"] {
     background-color: var(--purple-700);
     background-image: url('../assets/images/icon-social.svg');
     background-repeat: no-repeat;
-    background-size: auto;
-    background-position-x: 90%;
-    background-position-y: 3%;
+    background-size: var(--icon-size);
+    background-position-x: right var(--space-300);        
+    background-position-y: top -10px;
 }
 
 .card[data-category="self-care"] {
     background-color: var(--yellow-300);
     background-image: url('../assets/images/icon-self-care.svg');
     background-repeat: no-repeat;
-    background-size: auto;
-    background-position-x: 90%;
-    background-position-y: 3%;
+    background-size: var(--icon-size);
+    background-position-x: right var(--space-300);        
+    background-position-y: top -10px;
 }
 
 .hours-current {
@@ -257,7 +259,7 @@ h2 {
         grid-column: 2;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: var(--space-400);
-        align-content: space-around; /* Temp. fix, user-info being taller than the cards grid, figure out */
+        gap: var(--space-200);
+        align-content: space-around;
     }
 }

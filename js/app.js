@@ -25,7 +25,7 @@ async function init() {
 function render() {
     document.querySelectorAll('.card').forEach(card => {
         const category = card.dataset.category;
-        const entry = data.find(d => d.title.toLowerCase().replace(' ', '-') === category);
+        const entry = data.find(d => d.title.toLowerCase().replace(/ /g, '-') === category);
         if (!entry) return;
 
         const t = entry.timeframes[currentTimeframe];
