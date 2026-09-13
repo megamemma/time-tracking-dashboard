@@ -49,13 +49,9 @@ a {
 
 
     --fs-300: 0.9375rem;
-    /* 15px */
     --fs-400: 1.125rem;
-    /* 18px */
     --fs-600: 2.5rem;
-    /* 40px */
     --fs-700: 3.5rem;
-    /* 56px */
 
     --fw-light: 300;
     --fw-regular: 400;
@@ -65,23 +61,22 @@ a {
     --space-200: 1rem;
     --space-300: 1.5rem;
     --space-400: 2rem;
+    --space-500: 2.5rem;
     --space-600: 3rem;
 
     --radius-md: 1rem;
 
-    --icon-size: 3.625rem;    
-    --icon-offset: var(--space-300);
+    --bkgd-icon-size: 3.625rem;    
+    --bkgd-icon-offset-x: 1.5rem;
+    --bkgd-icon-offset-y: -0.125rem;
 
-    --bkgd: var(--navy-900);
+    --dark-text-bkgd: var(--navy-900);
 }
 
 body {
     background-color: var(--navy-950);
     color: var(--white-50);
     font-family: 'Rubik', sans-serif;
-
-    /* display: grid;
-    place-items: center; */
 
     display: flex;
     justify-content: center;
@@ -96,7 +91,7 @@ body {
 .dashboard {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 3vw, 2rem); /* Dynamically change the gap */
+    gap: clamp(1rem, 3vw, 2rem); 
     max-width: 375px;
     margin-inline: auto;
     padding: var(--space-300);
@@ -111,16 +106,20 @@ section.cards {
 .card {
     background-color: var(--orange-300);
     border-radius: var(--radius-md);
-    overflow: hidden; /* Shows the orange part behind card*/
     background-repeat: no-repeat;
-    background-size: var(--icon-size);
-    background-position: right var(--icon-offset) top -0.125rem;
+    background-size: var(--bkgd-icon-size);
+    background-position: right var(--bkgd-icon-offset-x) top var(--bkgd-icon-offset-y);
 }
 
 .card-content {
-    background-color: var(--bkgd);
+    background-color: var(--dark-text-bkgd);
     border-radius: var(--radius-md); 
-    margin-top: var(--space-400); /* Controlling visibility of svgs, pushing down the content */
+    border-bottom-left-radius: calc(var(--radius-md) - 1px);
+    border-bottom-right-radius: calc(var(--radius-md) - 1px);
+
+    /* Controls svgs visibility, pushes down content */
+    margin-top: var(--space-500);
+    
     padding: var(--space-300);
     display: flex;
     flex-direction: column;
@@ -170,6 +169,7 @@ section.cards {
 
 .hours-past {
     color: var(--purple-500);
+    margin-top: -0.75rem;
 }
 
 .user {
@@ -177,7 +177,7 @@ section.cards {
     display: flex;
     flex-direction: column;
     overflow: hidden; 
-    background-color: var(--bkgd);
+    background-color: var(--dark-text-bkgd);
 }
 
 .user-info {
@@ -242,8 +242,11 @@ h2 {
     font-size: var(--fs-500);
 }
 
-
 @media (min-width: 768px) {
+
+    :root {
+        --bkgd-icon-size: 4.5rem;
+    }
 
     .dashboard {
         max-width: 1110px; 
@@ -273,7 +276,7 @@ h2 {
     .period-nav {
         flex-direction: column;
         align-items: flex-start;
-        gap: var(--space-300);
+        gap: var(--space-200);
     }
 
     section.cards {
