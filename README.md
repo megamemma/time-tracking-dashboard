@@ -59,7 +59,7 @@ async function init() {
 } 
 ```
 5. Specificity bugs — found via DevTools Computed tab, not guessing.
-6. A11y - readability cap.
+6. A11y - readability cap, aria-live="polite" (so screen readers announce updated hours when switching Daily/Weekly/Monthly.)
 7. Layers of grids and flexboxes do indeed shrink and behave weirdly in various window sizes.
 8. Modern CSS reset.
 9. Used Lighthouse first thing after deploying. 
