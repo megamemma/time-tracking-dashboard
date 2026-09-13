@@ -8,9 +8,14 @@ let data = [];
 let currentTimeframe = 'weekly';
 
 async function init() {
-    const response = await fetch('../data.json');
-    data = await response.json();
-    render();
+    try {
+        const response = await fetch('../data.json');
+        data = await response.json();
+        render();
+    } catch (err) {
+        console.error('Failed to load data.json', err);
+    }
+
 
     document.querySelectorAll('.period-nav button').forEach(btn => {
         btn.addEventListener('click', () => {

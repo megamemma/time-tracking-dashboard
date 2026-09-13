@@ -116,11 +116,11 @@ section.cards {
 .card-content {
     background-color: var(--dark-text-bkgd);
     border-radius: var(--radius-md); 
-    border-bottom-left-radius: calc(var(--radius-md) - 1px);
-    border-bottom-right-radius: calc(var(--radius-md) - 1px);
+    border-bottom-left-radius: calc(var(--radius-md) - 2px);
+    border-bottom-right-radius: calc(var(--radius-md) - 2px);
 
     /* Controls svgs visibility, pushes down content */
-    margin-top: var(--space-500);
+    margin-top: var(--space-400);
     
     padding: var(--space-300);
     display: flex;
@@ -267,10 +267,10 @@ h2 {
         --bkgd-icon-offset-x: 1.5rem;
         --bkgd-icon-offset-y: -0.5rem;  
         
-            --fs-300: 0.9375rem;
-            --fs-400: 1.125rem;
-            --fs-600: 2.5rem;
-            --fs-700: 3.5rem;
+        --fs-300: 0.9375rem;
+        --fs-400: 1.125rem;
+        --fs-600: 2.5rem;
+        --fs-700: 3.5rem;
     }
 
     body {
@@ -287,10 +287,6 @@ h2 {
         width: calc(100% - 2rem * 2);
     }
 
-    .user {
-        grid-column: 1;
-    }
-
     section .user-info {
         flex-direction: column;
         gap: var(--space-300);
@@ -298,8 +294,17 @@ h2 {
         flex-grow: 1;
     }
 
+    .user img {
+        margin-top: var(--space-100);
+    }
+
     .user-info h1 {
         font-size: var(--fs-600);
+
+    }
+
+    .user-info span {
+        font-size: var(--fs-300);
     }
 
     .period-nav {
@@ -321,6 +326,7 @@ h2 {
         display: flex;
         flex-direction: column;
         align-items: start;
+        gap: var(--space-300);
     }
 
     .hours-current {
@@ -329,6 +335,10 @@ h2 {
 
     .hours-past {
         margin-top: -0.75rem;
+    }
+
+    .card-content {
+        margin-top: var(--space-500);
     }
 
     .card-content:hover {
