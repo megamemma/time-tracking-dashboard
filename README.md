@@ -22,15 +22,15 @@
 ### Links
 
 - Solution URL: [GitHub repository](https://github.com/megamemma/time-tracking-dashboard)
-- Live Site URL: [Live demo](https://your-live-site-url.com)
+- Live Site URL: [Live demo](https://time-tracking-dashboard-9751iptpi-megamemma1.vercel.app/)
 
 ### Built with
 
-Semantic HTML5
-CSS custom properties
-Flexbox / Grid
-Mobile-first
-Vanilla JS (fetch, DOM, events)
+- Semantic HTML5
+- CSS custom properties
+- Flexbox / Grid
+- Mobile-first
+- Vanilla JS (fetch, DOM, events)
 
 ### What I learned
 
@@ -58,12 +58,12 @@ async function init() {
     }
 } 
 ```
-4. Specificity bugs — found via DevTools Computed tab, not guessing.
-5. A11y - readability cap.
-6. Layers of grids and flexboxes do indeed shrink and behave weirdly in various window sizes.
-7. Modern CSS reset.
-8. Used Lighthouse first thing after deploying.
-9. GitHub, Vercel, other tooling and their peculiarities.
+5. Specificity bugs — found via DevTools Computed tab, not guessing.
+6. A11y - readability cap.
+7. Layers of grids and flexboxes do indeed shrink and behave weirdly in various window sizes.
+8. Modern CSS reset.
+9. Used Lighthouse first thing after deploying.
+10. GitHub, Vercel, CodePen, some other tooling and their peculiarities.
 
 ### Continued development
 1. Learn more: subgrid.
