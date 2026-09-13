@@ -104,8 +104,10 @@ section.cards {
 }
 
 .card {
-    background-color: var(--orange-300);
+    background-color: var(--orange-300); /* Default color in case won't load */
     border-radius: var(--radius-md);
+
+    /* ICONS in the background: */
     background-repeat: no-repeat;
     background-size: var(--bkgd-icon-size);
     background-position: right var(--bkgd-icon-offset-x) top var(--bkgd-icon-offset-y);
@@ -180,7 +182,7 @@ section.cards {
     background-color: var(--dark-text-bkgd);
 }
 
-.user-info {
+section .user-info {
     background-color: var(--purple-600);
     border-radius: var(--radius-md);
     padding: var(--space-300);
@@ -189,14 +191,14 @@ section.cards {
     gap: var(--space-200);
 }
 
-.user img {
+.user-info img {
     border-radius: 50%;
     outline: 3px solid var(--white-50);
     aspect-ratio: 1 / 1;
     width: clamp(3rem, 6vw, 5rem);
 }
 
-.user h1 {
+.user-info h1 {
     font-size: var(--fs-600);
     font-weight: var(--fw-light);
     line-height: 1.5;
@@ -246,6 +248,8 @@ h2 {
 
     :root {
         --bkgd-icon-size: 4.5rem;
+        --bkgd-icon-offset-x: 1.5rem;
+        --bkgd-icon-offset-y: -0.5rem;    
     }
 
     .dashboard {
@@ -281,6 +285,7 @@ h2 {
 
     section.cards {
         grid-column: 2;
+
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: var(--space-300);
