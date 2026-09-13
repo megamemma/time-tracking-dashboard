@@ -62,7 +62,7 @@ async function init() {
 6. A11y - readability cap.
 7. Layers of grids and flexboxes do indeed shrink and behave weirdly in various window sizes.
 8. Modern CSS reset.
-9. Used Lighthouse first thing after deploying.
+9. Used Lighthouse first thing after deploying. 
 10. GitHub, Vercel, CodePen, some other tooling and their peculiarities.
 
 ### Continued development
