@@ -1,79 +1,75 @@
 # Frontend Mentor - Time tracking dashboard solution
-This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw).
-
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-
-
-## Overview
 
 ### The challenge
-
-Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Switch between viewing Daily, Weekly, and Monthly stats
 
-### Screenshot
+### Screenshots
 
-![](./screenshot.jpg)
+<table>
+  <tr>
+    <td><img src="./screenshots/mobile-layout-basic-iphone.png" alt="Mobile preview" width="250"></td>
+    <td><img src="./screenshots/desktop-layout.png" alt="Desktop preview" width="500"></td>
+  </tr>
+  <tr>
+    <td align="center">Mobile</td>
+    <td align="center">Desktop</td>
+  </tr>
+</table>
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-## My process
+- Solution URL: [GitHub repository](https://github.com/megamemma/time-tracking-dashboard)
+- Live Site URL: [Live demo](https://your-live-site-url.com)
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+Semantic HTML5
+CSS custom properties
+Flexbox / Grid
+Mobile-first
+Vanilla JS (fetch, DOM, events)
 
 ### What I learned
 
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+1. Dropped BEM mid-project — too much overhead for this size. Switched to flat, CUBE-inspired naming.
+2. Pseudocode before syntax.
+3. Width / height calc differences, tokens vs literals, other small CSS things, e.g.:
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+            /* seemingly did nothing bcs of same height (h2, button). 
+            explicitly write out anyway. */
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+4. JSON-driven rendering:
+```js 
+async function init() {
+    try {
+        const response = await fetch('../data.json');
+        data = await response.json();
+        render();
+    } catch (err) {
+        console.error('Failed to load data.json', err);
+    }
+} 
 ```
+4. Specificity bugs — found via DevTools Computed tab, not guessing.
+5. A11y - readability cap.
+6. Layers of grids and flexboxes do indeed shrink and behave weirdly in various window sizes.
+7. Modern CSS reset.
+8. Used Lighthouse first thing after deploying.
+9. GitHub, Vercel, other tooling and their peculiarities.
 
 ### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+1. Learn more: subgrid.
+2. Make a11y audits a habit.
+3. Tailwind CSS.
+4. JS fundamentals - still shaky, next priority (before React). 
 
 ## Author
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-
+- Website - [GitHub](https://github.com/megamemma)
