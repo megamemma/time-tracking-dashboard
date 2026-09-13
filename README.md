@@ -22,7 +22,7 @@
 ### Links
 
 - Solution URL: [GitHub repository](https://github.com/megamemma/time-tracking-dashboard)
-- Live Site URL: [Live demo](https://time-tracking-dashboard-9751iptpi-megamemma1.vercel.app/)
+- Live Site URL: [Live demo](https://time-tracking-dashboard-kappa-tan.vercel.app/)
 
 ### Built with
 
